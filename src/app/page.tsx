@@ -3,6 +3,7 @@
 import axios from "axios";
 import { useState } from "react";
 import AllBrokenLinks from "./components/AllBrokenLinks";
+import Loader from "./components/Loader";
 
 export default function Home() {
   const [inputUrl, setInputUrl] = useState<string>("");
@@ -43,6 +44,7 @@ export default function Home() {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-4">Broken Link Checker</h1>
+      <p className="mb-4 italic underline">Please provide a full URL with protocols (http, https, ftp, etc) and prefix (www, etc)</p>
       <label>Enter URL:</label>
       <input 
         type="text" 
@@ -51,7 +53,9 @@ export default function Home() {
         placeholder="http://www.example.com/" 
         className="border-2 rounded-md mx-2 focus:none"
       />
-      <button className="text-white rounded-md bg-neutral-700 hover:bg-neutral-800 " onClick={handleSubmit} disabled={loading}>Check Links</button>
+      <button className="text-white rounded-md bg-neutral-700 hover:bg-neutral-800 w-32" onClick={handleSubmit} disabled={loading}>
+        {loading ? <Loader /> : "Check Links"}
+      </button>
       <hr></hr>
       <div id="results"><AllBrokenLinks brokenLinks={brokenLinks}/></div>
     </div>
