@@ -48,6 +48,7 @@ export default function Home() {
       <input 
         type="text" 
         id="urlInput" 
+        value={inputUrl}
         onChange={e => setInputUrl(e.target.value)} 
         placeholder="http://www.example.com/" 
         className="border-2 rounded-md mx-2 focus:none"
