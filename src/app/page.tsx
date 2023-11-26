@@ -32,7 +32,7 @@ export default function Home() {
           }
         });
     } else {
-      if(inputUrl.length > 0) alert("Invalid URL");
+      if(inputUrl.length > 0) alert("Please enter an valid URL");
       else alert("Please enter an valid URL")
     }
     setLoading(false);

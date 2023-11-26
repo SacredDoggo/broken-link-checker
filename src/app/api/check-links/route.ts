@@ -31,7 +31,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ brokenLinks }, { status: 200 });
         }
         catch (err) {
-            return NextResponse.json({ error: 'Invalid Link' }, { status: 400 });
+            return NextResponse.json({ error: 'Please enter an valid URL' }, { status: 400 });
         }
     }
     catch (err) {
