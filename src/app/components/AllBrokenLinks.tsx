@@ -8,7 +8,7 @@ const AllBrokenLinks: React.FC<InputProps> = ({ brokenLinks }) => {
       <h2>List of broken links</h2>
       <ul>
         {brokenLinks.map((str, index) => (
-          <li className="underline italic" key={index}>{str}</li>
+          <li className="underline italic my-1" key={index}>{str}</li>
         ))}
       </ul>
     </div>
