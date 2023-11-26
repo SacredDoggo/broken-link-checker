@@ -12,9 +12,8 @@ export default function Home() {
 
   const isLinkValid = (): boolean => {
     const pattern: RegExp = /^(ftp|http(s)?):\/\/[^ "]+$/;
-    const patternWithoutProtocol: RegExp = /^[^ "]+\.[^ "]+$/;
 
-    return pattern.test(inputUrl) || patternWithoutProtocol.test(inputUrl);
+    return pattern.test(inputUrl);
   }
   
   const checkLinks = async () => {
