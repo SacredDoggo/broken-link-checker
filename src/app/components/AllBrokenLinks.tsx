@@ -5,9 +5,9 @@ interface InputProps {
 const AllBrokenLinks: React.FC<InputProps> = ({ brokenLinks }) => {
     return (
         <div>
-      <h2>List of broken links</h2>
+      <b>List of broken links</b>
       <ul>
-        <b>{brokenLinks.length == 0 ? "No broken links" : ""}</b>
+        {brokenLinks.length == 0 ? "No broken links" : ""}
         {brokenLinks.map((str, index) => (
           <li className="underline italic my-1" key={index}>{str}</li>
         ))}
